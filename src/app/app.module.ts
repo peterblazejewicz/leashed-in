@@ -4,11 +4,17 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 
-import { AppComponent } from './app.component';
+import { AppComponent, SettingsDialog } from './app.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SettingsDialog
+  ],
+  entryComponents: [
+    AppComponent,
+    SettingsDialog
   ],
   imports: [
     BrowserModule,
