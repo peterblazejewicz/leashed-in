@@ -1,16 +1,6 @@
 import { Component, ViewChild, ViewContainerRef } from '@angular/core';
 import { MdSidenav, MdDialog, MdDialogConfig } from '@angular/material';
-
-@Component({
-  selector: 'settings-dialog',
-  template: `
-    <label>Would you like dog pics every min???</label>
-    <md-slide-toggle></md-slide-toggle>
-  `
-})
-export class SettingsDialog {
-
-}
+import { SettingsDialogComponent } from './settings-dialog/settings-dialog.component';
 
 @Component({
   selector: 'app-root',
@@ -38,7 +28,7 @@ export class AppComponent {
   openDialog() {
     const config = new MdDialogConfig();
     config.viewContainerRef = this.vcr;
-    this.dialog.open(SettingsDialog, config);
+    this.dialog.open(SettingsDialogComponent, config);
   }
 
   showDog(dog) {
